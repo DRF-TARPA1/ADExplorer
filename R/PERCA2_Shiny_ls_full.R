@@ -23,6 +23,9 @@ fNameOut <- file.path(PATH_OUT, paste(sep="","Shiny_ls_full",".csv"))
   
 
 # Load, Extract, Tansform  (ETL) the AD file list
+# File import is done under "UTF-8"since Latin alphabet underlying the text in the file.
+# The lines are split with the coma delimited (,) 
+# and 2 fields are subsplit with (=, \\ or non printable characters ^[:print:]) with REGEX.
 Shiny_AD <- read.csv(fNameIn, encoding="UTF-8", header=FALSE, stringsAsFactors=FALSE)
 Shiny_ls_full <- Shiny_AD[stringr::str_detect(Shiny_AD[,5],"Utilisateurs"), c(1,2,4)]
 names(Shiny_ls_full) <-  c("Nom","Prenom_(Region)","Centre")
