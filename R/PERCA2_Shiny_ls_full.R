@@ -1,7 +1,7 @@
 # File or Package Name: PERCA2_Shiny_ls_full.R
 # Title: Filtering an AD Listing and write CSV file
 # Description: Script for  filtering list from ./data 
-#             where a listing from AD output is processed and export in .ouput
+#             where a listing from AD output is processed and export in ./ouput
 # Version: 1.0.0
 # Author: Patrice Tardif
 # Maintainer: Patrice Tardif
